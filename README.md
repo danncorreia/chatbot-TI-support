@@ -1,5 +1,5 @@
 # chatbot-TI-support
-Chatbot developed to college subject Intelligence Artificial
+Chatbot developed to college subject Artificial Intelligence.
 
 Is better run the chatbot on Linux.
 
