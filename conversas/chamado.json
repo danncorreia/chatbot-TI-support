@@ -1,0 +1,31 @@
+{
+    "conversas": [{
+            "mensagens": ["Abrir", "Abertura", "Quero abrir", "Desejo abrir"],
+            "resposta": "Para quem você quer abrir um chamado?"
+        },
+        {
+            "mensagens": ["Consultar", "Quero consultar", "Gostaria de consultar", "Desejo consultar", "Consultar chamado", "Quero consultar chamado", "Gostaria de consultar chamado", "Desejo consultar chamado", "Consultar um chamado", "Quero consultar um chamado", "Gostaria de consultar um chamado", "Desejo consultar um chamado"],
+            "resposta": "Qual o número do chamado que você quer consultar?"
+        },
+        {
+            "mensagens": ["Consultar um cliente", "Quero consultar um cliente", "Gostaria de consultar um cliente", "Desejo consultar de um cliente", "Consultar chamados cliente", "Quero consultar chamados cliente", "Gostaria consultar chamados cliente", "Desejo consultar chamados cliente"],
+            "resposta": "Qual o nome do cliente que você quer consultar os chamados?"
+        },
+        {
+            "mensagens": ["Consultar um responsável", "Quero consultar um responsável", "Gostaria de consultar um responsável", "Desejo consultar um responsável", "Consultar chamados responsável", "Quero consultar chamados responsável", "Gostaria de consultar chamados responsável", "Desejo consultar chamados responsável"],
+            "resposta": "Qual o nome do responsável que você quer consultar os chamados?"
+        },
+        {
+            "mensagens": ["Consultar em aberto", "Quero consultar em aberto", "Gostaria de consultar em aberto", "Desejo consultar em aberto", "Consultar chamados aberto", "Quero consultar chamados aberto", "Gostaria de consultar chamados aberto", "Desejo consultar chamados aberto"],
+            "resposta": "Os chamados em aberto são"
+        },
+        {
+            "mensagens": ["Pausar", "Quero pausar", "Gostaria de pausar", "Desejo pausar", "Pausar chamado", "Quero pausar chamado", "Gostaria pausar chamado", "Desejo pausar chamado"],
+            "resposta": "Qual o chamado você quer pausar?"
+        },
+        {
+            "mensagens": ["Encerrar", "Quero encerrar", "Gostaria de encerrar", "Desejo encerrar", "Encerrar chamado", "Quero encerrar chamado", "Gostaria encerrar chamado", "Desejo encerrar chamado"],
+            "resposta": "Qual o chamado você quer encerrar?"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "conversas": [
+        {
+            "mensagens": [ "oi", "olá", "tudo bem?" ],
+            "resposta": "Olá, sou o robô de atendimento do Suporte Técnico. Como posso te ajudar?"    
+        },
+        {
+            "mensagens": ["bom dia"],
+            "resposta": "Bom dia, sou o robô de atendimento do Suporte Técnico. Como posso te ajudar?"
+        },
+        {
+            "mensagens": ["boa tarde"],
+            "resposta": "Bom tarde, sou o robô de atendimento do Suporte Técnico. Como posso te ajudar?"
+        },
+        {
+            "mensagens": ["boa noite"],
+            "resposta": "Boa noite, sou o robô de atendimento do Suporte Técnico. Como posso te ajudar?"
+        }
+    ]
+}

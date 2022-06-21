@@ -1,0 +1,16 @@
+{
+    "conversas": [
+        {
+            "mensagens": [ "onde o IFBA está localizado?", "onde fica o IFBA?", "onde vocês funcionam?" ],
+            "resposta": "O IFBA fica localizado na avenida Sérgio Vieria de Mello, 3150, Zabelê"
+        },
+        {
+            "mensagens": [ "qual o horário de funcionamento?", "que horas vocês ficam abertos?" ],
+            "resposta": "O IFBA funciona pela manhã, tarde e noite"
+        },
+        {
+            "mensagens": [ "que cursos tem no IFBA?", "que cursos o IFBA oferece?" ],
+            "resposta": "O IFBA oferece vários cursos nos segmentos médio, subsequente e graduações.  No momento, eu consigo responder sobre o curso de Sistemas de Informação. Para outros cursos, consulte o site www.ifba.edu.br para mais informações"
+        }
+    ]
+}

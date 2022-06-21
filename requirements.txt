@@ -1,0 +1,5 @@
+chatterbot==1.0.4
+chatterbot_corpus==1.2.0
+pytz
+flask
+# pip3 install -r requirements.txt
