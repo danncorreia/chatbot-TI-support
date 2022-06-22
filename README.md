@@ -5,10 +5,16 @@ Is better run the chatbot on Linux.
 
 First, need run the install of the requirements
 ````
-python install -r requirements.txt
+pip install -r requirements.txt
 ````
 
-before installed, start the chatbot
+before installed, need train the bot
+
+````
+python treinamento.py
+````
+
+finally, run the chatbot
 
 ````
 python robo.py
