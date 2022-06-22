@@ -1,10 +1,10 @@
 {
     "conversas": [{
-            "mensagens": ["Abrir", "Abertura", "Quero abrir", "Desejo abrir"],
+            "mensagens": ["Abrir", "Criar", "Abrir chamado", "Criar chamado", "Abrir um chamado", "Criar um chamado", "Abrir um chamado novo", "Abrir um novo chamado", "Criar novo chamado"],
             "resposta": "Para quem você quer abrir um chamado?"
         },
         {
-            "mensagens": ["Consultar", "Consultar chamado", "Consultar um chamado"],
+            "mensagens": ["Consultar", "Consultar chamado", "Consultar um chamado", "Consultar chamado número", "Consultar um chamado pelo número"],
             "resposta": "Qual o número do chamado que você quer consultar?"
         },
         {
@@ -12,19 +12,19 @@
             "resposta": "Qual o nome do cliente que você quer consultar os chamados?"
         },
         {
-            "mensagens": ["Consultar um responsável", "Consultar chamados responsável", "Consultar os chamados de um responsável", "Consultar chamados de um responsável"],
+            "mensagens": ["Consultar um responsável", "Consultar chamados responsável", "Consultar os chamados de um responsável", "Consultar chamados de um responsável", "Consultar chamados responsável"],
             "resposta": "Qual o nome do responsável que você quer consultar os chamados?"
         },
         {
-            "mensagens": ["Consultar em aberto", "Consultar chamados aberto", "Consultar chamados em aberto", "Consultar os chamados em aberto"],
+            "mensagens": ["Consultar em aberto", "Consultar chamados abertos", "Consultar chamados em aberto", "Consultar os chamados em aberto", "Consultar todos os chamados abertos"],
             "resposta": "Os chamados em aberto são"
         },
         {
-            "mensagens": ["Pausar", "Pausar chamado", "Pausar um chamado"],
-            "resposta": "Qual o chamado você quer pausar?"
+            "mensagens": ["Suspender", "Suspensão" ,"Suspender chamado", "Suspender um chamado", "Suspender um chamado em aberto", "Suspensão de chamado", "Suspensão chamado"],
+            "resposta": "Qual o chamado você quer suspender?"
         },
         {
-            "mensagens": ["Encerrar","Encerrar chamado", "Encerrar um chamado"],
+            "mensagens": ["Encerrar","Encerrar chamado", "Encerrar um chamado", "Encerrar um chamado aberto", "Encerrar um chamado suspenso", "Finalizar um chamado", "Finalizar um chamado aberto", "Finalizar"],
             "resposta": "Qual o chamado você quer encerrar?"
         }
     ]

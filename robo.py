@@ -2,7 +2,7 @@ from chatterbot import ChatBot
 from difflib import SequenceMatcher
 import json 
 
-CONFIANCA_MINIMA = 0.75
+CONFIANCA_MINIMA = 0.2
 NOME_USUARIO = ""
 DADOS_CLIENTE = {
     "ID": 0,
@@ -47,7 +47,7 @@ def executar_robo(robo):
         else:
             mensagem = input(NOME_USUARIO + ": ")
             resposta = robo.get_response(mensagem.lower())
-            
+            print(resposta.confidence)
             if resposta.confidence >= CONFIANCA_MINIMA: 
                 seleciona_action(mensagem, resposta.text)
             else:
@@ -70,7 +70,7 @@ def seleciona_action(message, resposta):
         listar_chamados_responsavel_abertos(input(resposta+": ").upper())
     elif resposta == "Os chamados em aberto são":
         listar_chamados_abertos()
-    elif resposta == "Qual o chamado você quer pausar?":
+    elif resposta == "Qual o chamado você quer suspender?":
         try:
             pausar_chamado(int(input(resposta+": ")))
         except:
@@ -113,6 +113,8 @@ def consultar_chamado(id):
     for chamado in chamados:
         if chamado["ID"] == id:
             print_chamado(chamado)
+            return
+    print("SUPORTE:", "Chamado não encontrado! \n")
 
 def listar_chamado_cliente(nome):
     chamados = read_db()
@@ -133,7 +135,6 @@ def listar_chamados_abertos():
             print_chamado(chamado)
 
 def pausar_chamado(id):
-    print(type(id))
     chamados = read_db()
     for chamado in chamados:
         if chamado["ID"] == id:
