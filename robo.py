@@ -2,7 +2,7 @@ from chatterbot import ChatBot
 from difflib import SequenceMatcher
 import json 
 
-CONFIANCA_MINIMA = 0.20
+CONFIANCA_MINIMA = 0.75
 NOME_USUARIO = ""
 DADOS_CLIENTE = {
     "ID": 0,
@@ -47,10 +47,8 @@ def executar_robo(robo):
         else:
             mensagem = input(NOME_USUARIO + ": ")
             resposta = robo.get_response(mensagem.lower())
-            print(f"o valor da confiança é: {resposta.confidence}")
-             
+            
             if resposta.confidence >= CONFIANCA_MINIMA: 
-                # print(resposta.text)
                 seleciona_action(mensagem, resposta.text)
             else:
                 print("Infelizmente, ainda não sei responder isso")
@@ -62,7 +60,10 @@ def seleciona_action(message, resposta):
     if resposta == "Para quem você quer abrir um chamado?":
         abertura_chamado(input(resposta+": ").upper())
     elif resposta == "Qual o número do chamado que você quer consultar?":
-        consultar_chamado(input(resposta +": "))
+        try:
+            consultar_chamado(int(input(resposta +": ")))
+        except:
+            print("O número do chamado inserido é inválido")
     elif resposta == "Qual o nome do cliente que você quer consultar os chamados?":
         listar_chamado_cliente(input(resposta+": ").upper())
     elif resposta == "Qual o nome do responsável que você quer consultar os chamados?":
@@ -70,9 +71,15 @@ def seleciona_action(message, resposta):
     elif resposta == "Os chamados em aberto são":
         listar_chamados_abertos()
     elif resposta == "Qual o chamado você quer pausar?":
-        pausar_chamado(input(resposta+": "))
+        try:
+            pausar_chamado(int(input(resposta+": ")))
+        except:
+            print("O número do chamado inserido é inválido")
     elif resposta == "Qual o chamado você quer encerrar?":
-        encerrar_chamado(input(resposta+": "))
+        try:
+            encerrar_chamado(int(input(resposta+": ")))
+        except:
+            print("O número do chamado inserido é inválido")
     else:
         print("Suporte:", resposta)
 
@@ -108,7 +115,6 @@ def consultar_chamado(id):
             print_chamado(chamado)
 
 def listar_chamado_cliente(nome):
-    print(nome)
     chamados = read_db()
     for chamado in chamados:
         if chamado["NOME_CLIENTE"] == nome:
@@ -127,6 +133,7 @@ def listar_chamados_abertos():
             print_chamado(chamado)
 
 def pausar_chamado(id):
+    print(type(id))
     chamados = read_db()
     for chamado in chamados:
         if chamado["ID"] == id:
@@ -140,6 +147,7 @@ def encerrar_chamado(id):
     chamados = read_db()
     for chamado in chamados:
         if chamado["ID"] == id:
+            chamado["RESOLUCAO"] = input("Qual a resolução do chamado?: ")
             chamado["STATUS_CHAMADO"] = "Encerrado"
             write_db(chamados)
             return
@@ -165,14 +173,14 @@ def get_new_id():
         return chamados[-1]["ID"] + 1
 
 def print_chamado(chamado):
-    print("Cliente: "+chamado["NOME_CLIENTE"]
+    print("\nCliente: "+chamado["NOME_CLIENTE"]
           +"\nNúmero do chamado: "+str(chamado["ID"])
           +"\nDescrição: "+chamado["DESCRICAO_CHAMADO"]
           +"\nStatus: "+chamado["STATUS_CHAMADO"]
           +"\nResponsável: "+chamado["RESPONSAVEL"]
     )
 
-    print("\nResolução: "+chamado["RESOLUCAO"]) if chamado["STATUS_CHAMADO"] != "Aberto" else "" + "\n"
+    print("Resolução: "+chamado["RESOLUCAO"]) if chamado["STATUS_CHAMADO"] != "Aberto" else ""
     print("\n")
 
 if __name__ == "__main__":
